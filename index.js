@@ -4,7 +4,7 @@ const downloader = require('image-downloader');
 
 function getLargestImageFromSrcSet(srcSet) {
     const splitedSrcs = srcSet.split(',');
-    const imgSrc = splitedSrcs[splitedSrcs.length - 1].split(' ')[0];
+    const imgSrc = splitedSrcs[splitedSrcs.length - 1].split('')[0];
     return imgSrc;
 }
 
