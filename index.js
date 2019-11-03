@@ -49,7 +49,7 @@ async function getImageUrlsFromPage(url) {
     });
     // await timeout(5000);
 
-    const items = await scrapeInfiniteScrollItems(page, extractItems, 100);
+    await scrapeInfiniteScrollItems(page, extractItems, 100);
 
     const imageSrcSets = await page.evaluate(() => {
         const imgs = Array.from(document.querySelectorAll('article img'));
